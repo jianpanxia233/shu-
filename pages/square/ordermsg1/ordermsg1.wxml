@@ -1,0 +1,40 @@
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <!-- <text class="cuIcon-title text-orange "></text> -->
+       订单号{{picknum}}
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+    价格:{{price}}
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+    联系方式：{{contact}}
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+    取件地点：{{pickplace}}
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+    寄往地点：{{aimplace}}
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+    物件大小：{{size}}
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+    送达时间：{{data}}
+    </view>
+    </view>
+    <view class="padding flex flex-direction">
+    <button class="cu-btn bg-blue lg" form-type='submit'> 点击接单！</button>
+    </view>
+  <!-- </view> -->

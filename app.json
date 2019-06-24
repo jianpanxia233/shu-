@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/talk/talk",
+    "pages/square/square",
+    "pages/square/ordermsg/ordermsg",
+    "pages/square/ordermsg1/ordermsg1",
+    "pages/logs/logs",
+    "pages/index/pickup/pickup",
+    "pages/index/post/post",
+    "pages/index/help/help",
+    "pages/mine/mine",
+    "pages/mine/information/information",
+    "pages/mine/outorders/outorders",
+    "pages/mine/inorders/inorders",
+    "pages/mine/report/report"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#a1c4fd",
+    "navigationBarTitleText": "上大智慧快递代取",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/first1.png",
+        "selectedIconPath": "images/first2.png"
+      },
+      
+      {
+        "pagePath": "pages/square/square",
+        "text": "广场",
+        "iconPath": "images/square1.png",
+        "selectedIconPath": "images/square2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/home1.png",
+        "selectedIconPath": "images/home2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

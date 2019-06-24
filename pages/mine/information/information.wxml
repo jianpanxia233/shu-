@@ -1,0 +1,24 @@
+<!--pages/mine/information/information.wxml-->
+<view class='content'>
+  <view style="background-image:url('/images/bg2.png')">
+    <view class='top'>
+      <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>
+    </view>
+    <view class='nickname'>
+      <open-data type="userNickName"></open-data> 
+    </view>
+  </view>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+	<view class="cu-form-group margin-top">
+		<view class="title">学号：</view>
+		<text class="title">{{myinfo.studentnumber}}</text>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">姓名：</view>
+    <text class="title">{{myinfo.username}}</text>
+	</view>
+	<view class="cu-form-group" bindtap='jumpsure'>
+		<text class='title'> 认证状态：</text><text class='title' wx:if="{{myinfo.authstate=='0'|| myinfo.authstate==null}}">未绑定</text><text class='title' wx:else>已绑定</text>
+	</view>
+</form>

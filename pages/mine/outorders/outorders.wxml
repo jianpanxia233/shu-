@@ -1,0 +1,14 @@
+<view class="cu-card article {{isCard?'no-card':''}}">
+  <view class="cu-item shadow" >
+    <view class="title">
+      <view class="text-cut">订单号：{{item.picknum}}</view>
+    </view>
+    <view class="content">
+      <view class="desc">
+      <view class="text-content"> <text>跑路费： {{price}}元\n取件地点：{{place}}\n取件时间: {{picktime}}</text></view>
+          <view class="cu-tag bg-green light round">{{time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+

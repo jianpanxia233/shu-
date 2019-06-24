@@ -1,0 +1,52 @@
+<form bindsubmit="formSubmit">
+	<view class="cu-form-group margin-top">
+		<view class="title">价格</view>
+		<input name='reward' placeholder="请输入订单价格"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">联系方式</view>
+		<input name='contactnumber' placeholder="请注明QQ/微信/手机号"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">寄件地点</view>
+		<input name='startplace' placeholder="请输入你准备寄件的地点"></input>
+    <text class="cuIcon-locationfill text-orange"></text>
+	</view>
+
+  <view class="cu-form-group margin-top">
+		<view class="title">普通选择</view>
+		<picker name='pickagesize' bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'请选择物件大小'}}
+			</view>
+		</picker>
+	</view>
+	
+	<view class="cu-form-group">
+		<view class="title">寄件时间</view>
+		<picker name='time' mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">寄件日期</view>
+		<picker  name='date' mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+  
+	<view class="cu-form-group align-start">
+		<view class="title">备注</view>
+		<textarea name='notes'  placeholder="请输入您的备注" ></textarea>
+	</view>
+  <view class="padding flex flex-direction">
+  <button class="cu-btn bg-blue lg" form-type='submit'>提交</button>
+</view>
+</form>
+
+
+

@@ -1,0 +1,44 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+ 
+.line1{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis; 
+}
+ 
+.open-data-userAvatarUrl {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0rpx auto;
+}
+.open-data-userNickName{
+  max-width: 105rpx;
+  display:block;
+}
+
+/* .container{
+  background-image: linear-gradient(120deg,#a1c4fd 0%,#c2e9fb 100%);
+  
+  text-align:center;
+} */
+
+.wodeimage{
+  height: 10rpx;       
+  width: 10rpx;
+}
+
+.container{
+  display:flex;
+  flex-direction: colunm;
+  align-items: center;
+}
+
+.list{
+  padding: 15px !important
+}

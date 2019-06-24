@@ -1,0 +1,50 @@
+<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/images/bg1.png');height: 414rpx;">
+  <view class="padding-xl text-white">
+    <view>
+      <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>   
+    </view>
+  </view>
+</view>
+
+<view class="solids-bottom padding-xs flex align-center" style='height:100rpx'>
+    <view class="flex-sub text-center">
+      <view class="solid-bottom text-xl padding">
+        <text class="text-black text-bold">
+          欢迎您！</text>
+          <open-data class="open-data-usernickName" type="usernickName"></open-data>
+      </view>
+    </view>
+  </view>
+
+<view class="">
+<view class="weui-cells weui-cells_after-title">
+            <navigator url="information/information" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                   <image src="/images/information.png" style="margin-right: 5px;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+                </view>
+                <view class="weui-cell__bd"><text style="font-size:35rpx">我的信息</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="outorders/outorders" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                   <image src="/images/send.png" style="margin-right: 5px;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+                </view>
+                <view class="weui-cell__bd"><text style="font-size:35rpx">已发订单</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="inorders/inorders" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                   <image src="/images/receive.png" style="margin-right: 5px;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+                </view>
+                <view class="weui-cell__bd"><text style="font-size:35rpx">已接订单</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="report/report" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                   <image src="/images/report.png" style="margin-right: 5px;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+                </view>
+                <view class="weui-cell__bd"><text style="font-size:35rpx"> 举报与反馈</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+</view>
+</view>

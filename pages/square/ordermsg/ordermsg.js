@@ -1,0 +1,118 @@
+// pages/square/ordermsg/ordermsg.js
+const app=getApp()
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    picknum:"000001",
+    price:"6.6",
+    contact:"18817297728",
+    pickplace:"西门菜鸟驿站",
+    aimplace:"新世纪2号楼",
+    size:"3kg",
+    data:"2019.7.2/14:00"
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.request({
+      url: '',
+      data: {
+        key: this.data.picknum,
+        openid:app.globalData.openid
+      },
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/json'
+      },
+
+      success: function (res) {
+        if (res.data.error_code == 0) {
+          if (options.data.key == 0)
+            that.setData({
+              data: res.data,
+            })
+        } else {
+          console.log('获取失败');
+        }
+      }
+
+
+
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  submit: function () {
+    wx.request({
+      url: '',
+      data:{
+          key: this.data.picknum,
+          openid: app.globalData.openid,
+          flag:"1"
+      },
+      success: function (res) {
+        if (res.data.error_code == 0) {
+          if (options.data.key == 0)
+            wx.showModal({
+              title: '接单成功',
+              content: '',
+            })
+        } else {
+          console.log('获取失败');
+        }
+      }
+    })
+  }
+})

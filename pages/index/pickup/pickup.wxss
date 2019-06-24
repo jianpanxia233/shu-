@@ -1,0 +1,9 @@
+/* .input{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+} */
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}

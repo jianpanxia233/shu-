@@ -1,0 +1,55 @@
+<view class="page">
+  <!--顶部导航栏-->  
+  <view class="swiper-tab">  
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">取件</view>  
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">寄件</view>  
+  </view>  
+  <!--内容主体-->  
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" >  
+    
+<swiper-item>   
+    <!--  -->
+  <view class="cu-card article {{isCard?'no-card':''}}"  wx:for="{{userdata}}" wx:key>
+  <view class="cu-item shadow" >
+    <view class="title">
+      <view class="text-cut">订单号：{{item.ordering}}</view>
+    </view>
+    <view class="content">
+      <view class="desc">
+      <view class="text-content"> <text>跑路费： {{item.reward}}元\n取件地点：{{item.startplace}}\n收件地点: {{item.finishplace}}</text></view>
+        <view>
+          <view class="cu-tag bg-blue light round">待取ing</view>
+          <view class="cu-tag bg-green light round">{{item.time}}</view>
+          <button class="cu-btn round bg-blue  round "bindtap='fordetail'> 点击查看详情！</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+    <!--  -->
+    </swiper-item>  
+<swiper-item >   
+    <!--  -->
+  <view class="cu-card article {{isCard?'no-card':''}}" wx:for="{{userdata0}}" wx:key>
+  <view class="cu-item shadow" >
+    <view class="title">
+      <view class="text-cut">订单号：{{item.ordering}}</view>
+    </view>
+    <view class="content">
+      <view class="desc">
+      <view class="text-content"> <text>跑路费： {{item.reward}}元\n取件地点：{{item.startplace}}\n取件时间: {{item.time}}</text></view>
+        <view>
+          <view class="cu-tag bg-red light round">待寄ing</view>
+          <!-- <view class="cu-tag bg-green light round">待寄ing</view> -->
+          <button class="cu-btn round bg-blue  round "bindtap='fordetail1'> 点击查看详情！</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+    <!--  -->
+    </swiper-item>  
+
+  </swiper>  
+</view>  
