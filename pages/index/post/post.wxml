@@ -9,7 +9,7 @@
 	</view>
 	<view class="cu-form-group">
 		<view class="title">寄件地点</view>
-		<input name='startplace' placeholder="请输入你准备寄件的地点"></input>
+		<input name='startplace' placeholder="请输入拿东西的地点"></input>
     <text class="cuIcon-locationfill text-orange"></text>
 	</view>
 

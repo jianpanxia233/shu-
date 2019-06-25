@@ -29,14 +29,14 @@
                 <view class="weui-cell__hd">
                    <image src="/images/send.png" style="margin-right: 5px;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
                 </view>
-                <view class="weui-cell__bd"><text style="font-size:35rpx">已发订单</text></view>
+                <view class="weui-cell__bd"><text style="font-size:35rpx">我的取件</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
             <navigator url="inorders/inorders" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                    <image src="/images/receive.png" style="margin-right: 5px;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
                 </view>
-                <view class="weui-cell__bd"><text style="font-size:35rpx">已接订单</text></view>
+                <view class="weui-cell__bd"><text style="font-size:35rpx">我的寄件</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
             <navigator url="report/report" class="weui-cell weui-cell_access" hover-class="weui-cell_active">

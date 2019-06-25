@@ -1,37 +1,37 @@
   <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
       <!-- <text class="cuIcon-title text-orange "></text> -->
-       订单号{{picknum}}
+       订单号{{xinxi.ordering}}
     </view>
     </view>
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-    价格:{{price}}
+    价格:{{xinxi.reward}}
     </view>
     </view>
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-    联系方式：{{contact}}
+    联系方式：{{xinxi.contactnumber}}
     </view>
     </view>
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-    取件地点：{{pickplace}}
+    取件地点：{{xinxi.startplace}}
     </view>
     </view>
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-    送达地点：{{aimplace}}
+    送达地点：{{xinxi.finishplace}}
     </view>
     </view>
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-    物件大小：{{size}}
+    物件大小：{{xinxi.packagesize}}
     </view>
     </view>
     <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-    送达时间：{{data}}
+    送达时间：{{xinxi.time}}
     </view>
     </view>
     <view class="padding flex flex-direction">

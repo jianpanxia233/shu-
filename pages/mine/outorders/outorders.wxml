@@ -1,13 +1,16 @@
-<view class="cu-card article {{isCard?'no-card':''}}">
+<view class="cu-card article {{isCard?'no-card':''}}" wx:for="{{xinxi}}" wx:key>
   <view class="cu-item shadow" >
     <view class="title">
-      <view class="text-cut">订单号：{{item.picknum}}</view>
+      <view class="text-cut">订单号：{{item.ordering}}</view>
     </view>
     <view class="content">
       <view class="desc">
-      <view class="text-content"> <text>跑路费： {{price}}元\n取件地点：{{place}}\n取件时间: {{picktime}}</text></view>
-          <view class="cu-tag bg-green light round">{{time}}</view>
+      <view class="text-content"> <text>跑路费： {{item.reward}}元\n取件地点：{{item.startplace}}\n取件时间: {{item.time}}</text></view>
       </view>
+         <view>
+          <!-- <view class="cu-tag bg-green light round">{{time}}</view> -->
+          <button class="cu-btn round bg-blue  round " catchtap='cancelorder' data-ordering="{{item.ordering}}" wx:if=" {{item.checked=='1'}}">取消订单</button> 
+        </view>
     </view>
   </view>
 </view>

@@ -127,13 +127,19 @@ Page({
     })
   },
   fordetail: function (e) {
+    var that=this;
+    var ordering = e.currentTarget.dataset.ordering;
+    console.log(ordering)
     wx.navigateTo({
-      url: '/pages/square/ordermsg/ordermsg',
+      url: '/pages/square/ordermsg/ordermsg?ordering='+ordering,
     })
   },
   fordetail1: function (e) {
-  wx.navigateTo({
-    url: '/pages/square/ordermsg1/ordermsg1',
-   })
+    var that = this;
+    var ordering = e.currentTarget.dataset.ordering;
+    console.log(ordering)
+    wx.navigateTo({
+      url: '/pages/square/ordermsg1/ordermsg1?ordering=' + ordering,
+    })
   }
 })

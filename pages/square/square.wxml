@@ -12,7 +12,7 @@
   <view class="cu-card article {{isCard?'no-card':''}}"  wx:for="{{userdata}}" wx:key>
   <view class="cu-item shadow" >
     <view class="title">
-      <view class="text-cut">订单号：{{item.ordering}}</view>
+      <view class="text-cut" >订单号：{{item.ordering}}</view>
     </view>
     <view class="content">
       <view class="desc">
@@ -20,7 +20,7 @@
         <view>
           <view class="cu-tag bg-blue light round">待取ing</view>
           <view class="cu-tag bg-green light round">{{item.time}}</view>
-          <button class="cu-btn round bg-blue  round "bindtap='fordetail'> 点击查看详情！</button>
+          <button class="cu-btn round bg-blue  round "catchtap='fordetail' data-ordering="{{item.ordering}}"> 点击查看详情！</button>
         </view>
       </view>
     </view>
@@ -41,7 +41,7 @@
         <view>
           <view class="cu-tag bg-red light round">待寄ing</view>
           <!-- <view class="cu-tag bg-green light round">待寄ing</view> -->
-          <button class="cu-btn round bg-blue  round "bindtap='fordetail1'> 点击查看详情！</button>
+          <button class="cu-btn round bg-blue  round " catchtap='fordetail1' data-ordering="{{item.ordering}}"> 点击查看详情！</button>
         </view>
       </view>
     </view>

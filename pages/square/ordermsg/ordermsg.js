@@ -1,47 +1,34 @@
 // pages/square/ordermsg/ordermsg.js
 const app=getApp()
+var ordering = null;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    picknum:"000001",
-    price:"6.6",
-    contact:"18817297728",
-    pickplace:"西门菜鸟驿站",
-    aimplace:"新世纪2号楼",
-    size:"3kg",
-    data:"2019.7.2/14:00"
+    xinxi:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    ordering =  options.ordering;
+    console.log('msg:'+ordering)
     wx.request({
-      url: '',
-      data: {
-        key: this.data.picknum,
-        openid:app.globalData.openid
-      },
+      url: 'http://127.0.0.1:8000/auth/ordering?ordering='+ordering,
       method: 'GET',
       header: {
         'Content-Type': 'application/json'
       },
-
       success: function (res) {
-        if (res.data.error_code == 0) {
-          if (options.data.key == 0)
+        console.log(res.data)
             that.setData({
-              data: res.data,
+              xinxi: res.data,
             })
-        } else {
-          console.log('获取失败');
-        }
       }
-
-
 
     })
   },
@@ -96,21 +83,22 @@ Page({
   },
   submit: function () {
     wx.request({
-      url: '',
+      url: 'http://127.0.0.1:8000/auth/jiedan1',
       data:{
-          key: this.data.picknum,
           openid: app.globalData.openid,
-          flag:"1"
+          ordering:ordering,
+          checked:'1',
       },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method:"POST",
       success: function (res) {
-        if (res.data.error_code == 0) {
-          if (options.data.key == 0)
+        console.log(res.data)
+        if (res.data == 'success changed') {
             wx.showModal({
               title: '接单成功',
-              content: '',
             })
-        } else {
-          console.log('获取失败');
         }
       }
     })
