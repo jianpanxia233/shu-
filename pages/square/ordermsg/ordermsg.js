@@ -99,6 +99,9 @@ Page({
             wx.showModal({
               title: '接单成功',
             })
+          wx.switchTab({
+            url: '/pages/square/square',
+          })
         }
       }
     })

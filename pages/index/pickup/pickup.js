@@ -35,7 +35,7 @@ Page({
             title: '提示',
             content: '发布成功,为您跳转到首页',
           }),
-            wx.swithbar({
+            wx.switchTab({
               url: '/pages/index/index',
             })
         },
