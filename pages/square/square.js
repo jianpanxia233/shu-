@@ -18,7 +18,7 @@ Page({
     wx.stopPullDownRefresh() //刷新完成后停止下拉刷新动效
     var that = this
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/pickup',
+      url: 'http://139.196.121.49/auth/pickup',
       method: 'GET',
       header: {
         'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ Page({
     //console.log(e);
     var that = this;
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/send',
+      url: 'http://139.196.121.49/auth/send',
       method: 'GET',
       header: {
         'Content-Type': 'application/json'
@@ -130,16 +130,56 @@ Page({
     var that=this;
     var ordering = e.currentTarget.dataset.ordering;
     console.log(ordering)
-    wx.navigateTo({
-      url: '/pages/square/ordermsg/ordermsg?ordering='+ordering,
+    var openid = app.globalData.openid
+    wx.request({
+      url: 'http://139.196.121.49/auth/whether?openid=' + openid,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data.authstate)
+        if (res.data.authstate == '1') {
+          console.log('nihao')
+          wx.navigateTo({
+            url: '/pages/square/ordermsg/ordermsg?ordering=' + ordering,
+          })
+        }
+        else {
+          wx.showModal({
+            title: '您尚未注册',
+            content: '请点击首页帮忙取件/寄件',
+          })
+        }
+      }
     })
+
   },
   fordetail1: function (e) {
     var that = this;
     var ordering = e.currentTarget.dataset.ordering;
     console.log(ordering)
-    wx.navigateTo({
-      url: '/pages/square/ordermsg1/ordermsg1?ordering=' + ordering,
+    var openid = app.globalData.openid
+    wx.request({
+      url: 'http://139.196.121.49/auth/whether?openid=' + openid,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data.authstate)
+        if (res.data.authstate == '1') {
+          console.log('nihao')
+          wx.navigateTo({
+            url: '/pages/square/ordermsg1/ordermsg1?ordering=' + ordering,
+          })
+        }
+        else {
+          wx.showModal({
+            title: '您尚未注册',
+            content: '请点击首页帮忙取件/寄件',
+          })
+        }
+      }
     })
+
   }
 })

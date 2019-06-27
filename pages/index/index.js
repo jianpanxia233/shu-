@@ -16,7 +16,7 @@ Page({
     //向后端发送用户id判断是否已经注册
     var openid = app.globalData.openid
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/whether?openid='+openid,
+      url: 'http://139.196.121.49/auth/whether?openid='+openid,
       header: {
         'content-type': 'application/json'
       },

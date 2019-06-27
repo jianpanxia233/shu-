@@ -12,7 +12,26 @@ Page({
     // time: "2019.6.21/18:00",
     // click: "取消订单"
   },
-
+  finish: function (e) {
+    var that = this;
+    var ordering = e.currentTarget.dataset.ordering;
+    wx.request({
+      url: 'http://139.196.121.49/auth/finish1',
+      data: {
+        ordering: ordering,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      success(res) {
+        wx.showModal({
+          title: '提示',
+          content: '感谢您的帮助',
+        })
+      }
+    })
+  },
   cancelorder: function (e) {
     var that=this;
     var ordering = e.currentTarget.dataset.ordering;
@@ -23,7 +42,7 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.request({
-            url: 'http://127.0.0.1:8000/auth/qvxiao',
+            url: 'http://139.196.121.49/auth/qvxiao',
             data: {
               openid: app.globalData.openid,
               ordering: ordering,
@@ -60,7 +79,7 @@ Page({
     var that =this;
     wx.stopPullDownRefresh() //刷新完成后停止下拉刷新动效
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/wodejijian',
+      url: 'http://139.196.121.49/auth/wodejijian',
       data: {
         openid: app.globalData.openid
       },

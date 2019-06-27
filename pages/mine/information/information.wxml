@@ -1,6 +1,6 @@
 <!--pages/mine/information/information.wxml-->
 <view class='content'>
-  <view style="background-image:url('/images/bg2.png')">
+  <view class="container" style="background-image:url('http://139.196.121.49/static/bg3.png')">
     <view class='top'>
       <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>
     </view>
@@ -9,8 +9,10 @@
     </view>
   </view>
 </view>
+
+
 <form bindsubmit="formSubmit" bindreset="formReset">
-	<view class="cu-form-group margin-top">
+	<view class="cu-form-group">
 		<view class="title">学号：</view>
 		<text class="title">{{myinfo.studentnumber}}</text>
 	</view>

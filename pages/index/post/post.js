@@ -16,7 +16,7 @@ Page({
     var that = this.data
     if (e.detail.value.reward != '' && e.detail.value.contactnumber != '' && e.detail.value.place != '') {
       wx.request({
-        url: 'http://127.0.0.1:8000/auth/send',
+        url: 'http://139.196.121.49/auth/send',
         data: {
           reward: e.detail.value.reward,
           contactnumber: e.detail.value.contactnumber,

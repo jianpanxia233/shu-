@@ -1,19 +1,11 @@
-<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/images/bg1.png');height: 414rpx;">
-  <view class="padding-xl text-white">
-    <view>
-      <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data>   
-    </view>
-  </view>
-</view>
-
-<view class="solids-bottom padding-xs flex align-center" style='height:100rpx'>
-    <view class="flex-sub text-center">
-      <view class="solid-bottom text-xl padding">
-        <text class="text-black text-bold">
-          欢迎您！</text>
+  <view class="bg" style="background-image:url('http://139.196.121.49/static/bg3.png')">
+      <view class="box" style="text-align:center" >
+          <view class='welcome'>欢迎您！
           <open-data class="open-data-usernickName" type="usernickName"></open-data>
+          </view>
+          <open-data class="open-data-userAvatarUrl" type="userAvatarUrl"></open-data> 
+          <view class='days_info'>您已加入快递代取{{pick_num}}天</view> 
       </view>
-    </view>
   </view>
 
 <view class="">

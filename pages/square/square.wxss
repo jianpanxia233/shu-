@@ -16,7 +16,7 @@
   color: #777;  
 }  
 .swiper {  
-  height: 1100px;  
+  height: 6000px;  
   background:rgb(160, 184, 221);  
 }  
 .on {  

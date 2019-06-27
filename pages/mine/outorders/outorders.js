@@ -15,6 +15,26 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  finish:function(e){
+    var that = this;
+    var ordering = e.currentTarget.dataset.ordering;
+    wx.request({
+      url: 'http://139.196.121.49/auth/finish',
+      data: {
+        ordering: ordering,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      success(res) {
+        wx.showModal({
+          title: '提示',
+          content: '感谢您的帮助',
+        })
+      }
+    })
+  },
   cancelorder: function (e) {
     var that = this;
     var ordering = e.currentTarget.dataset.ordering;
@@ -25,7 +45,7 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.request({
-            url: 'http://127.0.0.1:8000/auth/qvxiaoqvjian',
+            url: 'http://139.196.121.49/auth/qvxiaoqvjian',
             data: {
               openid: app.globalData.openid,
               ordering: ordering,
@@ -57,7 +77,7 @@ Page({
     var that = this
     wx.stopPullDownRefresh() //刷新完成后停止下拉刷新动效
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/wodeqvjian',
+      url: 'http://139.196.121.49/auth/wodeqvjian',
       data: {
         openid: app.globalData.openid
       },

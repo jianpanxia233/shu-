@@ -7,7 +7,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/xinxi?openid=' + app.globalData.openid,
+      url: 'http://139.196.121.49/auth/xinxi?openid=' + app.globalData.openid,
       header: {
         'content-type': 'applciation/json'
       },

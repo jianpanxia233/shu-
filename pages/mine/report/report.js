@@ -32,7 +32,7 @@ Page({
     //向后台发送举报与反馈的信息
     var that=this.data
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/Fankui',
+      url: 'http://139.196.121.49/auth/Fankui',
       data:{
         warning:that.text
       },

@@ -39,6 +39,18 @@
   align-items: center;
 }
 
-.list{
-  padding: 15px !important
+.bg{
+  height:500rpx;
+}
+.box{
+  padding-top:120rpx;
+  color: #ffffff;
+}
+.welcome{
+  font-size: 35rpx;
+  margin-bottom: 20rpx;
+}
+.days_info{
+  margin-top: 30rpx;
+  font-size: 30rpx;
 }

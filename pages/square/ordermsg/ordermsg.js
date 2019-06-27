@@ -18,7 +18,7 @@ Page({
     ordering =  options.ordering;
     console.log('msg:'+ordering)
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/ordering?ordering='+ordering,
+      url: 'http://139.196.121.49/auth/ordering?ordering='+ordering,
       method: 'GET',
       header: {
         'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ Page({
   },
   submit: function () {
     wx.request({
-      url: 'http://127.0.0.1:8000/auth/jiedan1',
+      url: 'http://139.196.121.49/auth/jiedan1',
       data:{
           openid: app.globalData.openid,
           ordering:ordering,

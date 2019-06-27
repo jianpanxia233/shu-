@@ -1,15 +1,12 @@
 /* pages/mine/information/information.wxss */
-.nav{
-    background-color: #fff;
-}
 .top{
-  width: 250rpx;
-  height: 250rpx;
-  margin: 0 auto;
+  text-align: center;
 }
 .nickname{
-  margin-bottom: 10rpx;
+  margin-top: 30rpx;
   text-align: center;
+  font-size: 35rpx;
+  color: #ffffff;
 }
 .item{
   height: 70rpx;
@@ -18,15 +15,17 @@
   display: flex;
   border-radius: 20rpx;
 }
-.left{
-  display: flex;
-  justify-content: flex-start;
-  flex-grow: 1;
+
+.open-data-userAvatarUrl {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0rpx auto;
 }
-.right{
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-  color: #ccc;
-  margin-right: 20rpx;
+
+.container{
+  padding-top: 150rpx;
+  height: 500rpx;
 }

@@ -24,7 +24,7 @@ Page({
           }),
         console.log("yes"),
         wx.request({
-            url: 'http://127.0.0.1:8000/auth/authorize',//后端端口
+            url: 'http://139.196.121.49/auth/authorize',//后端端口
           header: {
             'content-type': 'application/x-www-form-urlencoded'
           },

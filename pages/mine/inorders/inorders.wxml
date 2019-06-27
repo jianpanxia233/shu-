@@ -6,8 +6,10 @@
     <view class="content">
       <view class="desc">
       <view class="text-content"> <text>跑路费： {{item.reward}}元\n取件地点：{{item.startplace}}\n取件时间: {{item.time}}</text></view>
+         
         <view>
           <!-- <view class="cu-tag bg-green light round">{{time}}</view> -->
+          <button class="cu-btn round bg-green  round" catchtap='finish' data-ordering="{{item.ordering}}" wx:if=" {{item.checked=='1'}}">完成</button>
           <button class="cu-btn round bg-blue  round " catchtap='cancelorder' data-ordering="{{item.ordering}}" wx:if=" {{item.checked=='1'}}">取消订单</button> 
         </view>
       </view>
